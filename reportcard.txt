@@ -1,0 +1,226 @@
+
+import java.util.*;
+public class ReportCard {
+	
+	
+	
+	public static void main(String args[])
+	{
+		
+		String [] names = {"Aastha","Anaya","Avanti","Divya","Kaavi" ,
+							"Liyana","Muskan","Neha","Pavitra","Priyank" ,
+							"Reet","Reha","Sachi","Shloka","Trisha",
+							"Aariana","Aashvi","Anaya","Anushka","Arsshia"};
+		int option;
+		int []roll_no = new int[20];
+		double[] MathsMarks = new double[20];
+		double[] HistoryMarks = new double[20];
+		double[] GeographyMarks = new double[20];
+		double[] EnglishMarks = new double[20];
+		double[] HindiMarks = new double[20];
+		double[] PhysicsMarks = new double[20];
+		double[] ChemistryMarks = new double[20];
+		double[] BiologyMarks = new double[20];
+		double[] CommerceMarks = new double[20];
+		double[] YogaMarks = new double[20];
+		double[] ArtsMarks = new double[20];
+		double[] ComputerMarks = new double[20];
+		double[] CookeryMarks = new double[20];
+		
+		Scanner scan = new Scanner(System.in);
+		
+		for (int i = 0 ; i<20 ; i++)
+		{
+			roll_no[i] = i+1;
+		}
+		
+		for (int i = 0 ; i < 20 ; i++)
+		{
+			MathsMarks [i] = Math.round(Math.random()*100);
+			HistoryMarks [i] = Math.round(Math.random()*100);
+			GeographyMarks [i] = Math.round(Math.random()*100);
+			EnglishMarks [i] = Math.round(Math.random()*100);
+			HindiMarks [i] = Math.round(Math.random()*100);
+			
+		}
+		
+		for (int i = 0 ; i < 15 ; i++)
+		{
+			PhysicsMarks [i] = Math.round(Math.random()*100);
+			ChemistryMarks [i] = Math.round(Math.random()*100);
+			BiologyMarks [i] = Math.round(Math.random()*100);
+			
+			
+		}
+		
+		//Manual entry as no logic is defined.
+		int p = 0;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		CookeryMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		CookeryMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		YogaMarks[p]= Math.round(Math.random()*100);p++;
+		ArtsMarks[p]= Math.round(Math.random()*100);p++;
+		CookeryMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);p++;
+		ComputerMarks[p]= Math.round(Math.random()*100);
+		
+		
+		for (int i = 15 ; i < 20 ; i++)
+		{
+			CommerceMarks [i] = Math.round(Math.random()*100);
+						
+		}
+		
+		System.out.println("1:See the list of Students roll no. wise");//done
+		System.out.println("2:Print the name in alphabetical order");//done
+		System.out.println("3:See  Marks of all Subjects");//done
+		System.out.println("4:See Percentage of all Students");//done
+		System.out.println("5:Display highest marks in each subject");
+		System.out.println("6:Display Overall percentagewise Top 3 rankers");
+		System.out.println("7:See marks of a particular student: Enter Roll no.");
+		
+		
+		
+		do
+		{
+		int ch = scan.nextInt();
+		option = ch;
+		switch(ch) {
+		
+		case 1:
+			System.out.println("RollNo"+"\t"+"Name");
+		for (int i=0;i<names.length;i++)
+		{
+			System.out.println(roll_no[i]+"\t"+ names[i]);
+			
+		}
+		break;
+		
+		case 2:
+			//use sorted names to keep the original array clean.
+			String []sortednames = new String[20];
+			for (int p1=0;p1<names.length;p1++)
+			{
+				sortednames[p1] = names[p1];
+			}
+			
+			
+			for (int i=0;i<sortednames.length;i++)
+			{
+				for (int j = i+1 ; j <sortednames.length;j++)
+				{
+					if(sortednames[j].compareTo(sortednames[i])<0)
+					{
+					String temp = sortednames[i];
+					sortednames[i]=sortednames[j];
+					sortednames[j]=temp;
+					}
+				}
+				System.out.println(sortednames[i]);
+				
+			}
+		break;
+		
+		case 3:
+			System.out.println("RollNo"+"\t"+"Name"+"\t"+"\t"+"Maths"+"\t"+"History"+"\t"+
+								"Geog"+"\t"+"English"+"\t"+"Hindi"+"\t"+"Physics"+"\t"+
+								"Chemi"+"\t"+"Biology"+"\t"+"Commc"+"\t"+"Yoga"+"\t"+
+								"Arts"+"\t"+"Comptr"+"\t"+"Cookery");
+			for (int i=0;i<20;i++)
+			{
+				System.out.println(roll_no[i] +"\t"+names[i]+"\t"+"\t"+MathsMarks[i]+"\t"+HistoryMarks[i]+"\t"+GeographyMarks[i]+"\t"+EnglishMarks[i]+"\t"+HindiMarks[i]
+						+"\t"+PhysicsMarks[i]+"\t"+ChemistryMarks[i]+"\t"+BiologyMarks[i]+"\t"+CommerceMarks[i]
+						+"\t"+YogaMarks[i]+"\t"+ArtsMarks[i]+"\t"+ComputerMarks[i]	+"\t"+CookeryMarks[i]);
+				
+			}
+		break;
+		
+		case 4:
+			
+			System.out.println("RollNo"+"\t"+"Name"+"\t"+"%");
+			for (int i=0;i<16;i++)
+			{
+				System.out.println(roll_no[i] +"\t"+names[i]+"\t"+Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
+						+PhysicsMarks[i]+ChemistryMarks[i]+BiologyMarks[i]+CommerceMarks[i]
+						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/9));
+				
+			}
+			for (int i=16;i<20;i++)
+			{
+				System.out.println(roll_no[i] +"\t"+names[i]+"\t"+Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
+						+PhysicsMarks[i]+ChemistryMarks[i]+BiologyMarks[i]+CommerceMarks[i]
+						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/7));
+				
+			}
+			
+			break;
+			
+		case 5://dispaly highest marks in each subject
+			double sortedmarks[] = new double[20];
+			
+			String namehighestmarks = new String();
+			for (int p1=0;p1<20;p1++)
+			{
+				sortedmarks[p1] = MathsMarks[p1];
+			}
+			for (int i=0;i<20;i++)
+			{
+				for (int j = i+1 ; j <20;j++)
+				{
+					if(sortedmarks[j]>sortedmarks[i])
+					{
+					double temp = sortedmarks[i];
+					sortedmarks[i]=sortedmarks[j];
+					sortedmarks[j]=temp;
+					namehighestmarks = names[i];
+					}
+				}
+								
+			}
+			System.out.println("Maximum Maths Marks : "+sortedmarks[0] );
+			//Same logic to be used for other subject marks.
+			
+						
+			
+			break;
+		
+		case 6:
+			//Top three rankers in each stream.
+			double[] total_marks = new double[16];
+			for (int i=0;i<16;i++)
+			{
+				System.out.println(roll_no[i] +"\t"+names[i]+"\t"+Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
+						+PhysicsMarks[i]+ChemistryMarks[i]+BiologyMarks[i]+CommerceMarks[i]
+						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/9));
+				
+			}
+			
+			break;
+		default : 
+			System.out.println("Invalid Option");
+			break;
+			
+			
+			
+		}
+		} while (option !=9);
+		
+	}
+
+	
+	
+	
+
+}
