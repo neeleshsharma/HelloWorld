@@ -169,8 +169,6 @@ public class ReportCard {
 			
 		case 5://dispaly highest marks in each subject
 			double sortedmarks[] = new double[20];
-			
-			String namehighestmarks = new String();
 			for (int p1=0;p1<20;p1++)
 			{
 				sortedmarks[p1] = MathsMarks[p1];
@@ -184,13 +182,33 @@ public class ReportCard {
 					double temp = sortedmarks[i];
 					sortedmarks[i]=sortedmarks[j];
 					sortedmarks[j]=temp;
-					namehighestmarks = names[i];
 					}
 				}
 								
 			}
 			System.out.println("Maximum Maths Marks : "+sortedmarks[0] );
 			//Same logic to be used for other subject marks.
+			//History starts
+			for (int p1=0;p1<20;p1++)
+			{
+				sortedmarks[p1] = HistoryMarks[p1];
+			}
+			for (int i=0;i<20;i++)
+			{
+				for (int j = i+1 ; j <20;j++)
+				{
+					if(sortedmarks[j]>sortedmarks[i])
+					{
+					double temp = sortedmarks[i];
+					sortedmarks[i]=sortedmarks[j];
+					sortedmarks[j]=temp;
+					}
+				}
+								
+			}
+			System.out.println("Maximum History Marks : "+sortedmarks[0] );
+			
+			//History ends
 			
 						
 			
@@ -198,16 +216,106 @@ public class ReportCard {
 		
 		case 6:
 			//Top three rankers in each stream.
-			double[] total_marks = new double[16];
+			String science_first , science_second , science_third,commerce_first ,commerce_second, commerce_third;
+			science_first="";science_second="";science_third="";
+			commerce_first="";commerce_second="";commerce_third="";
+			double[] total_marks = new double[20];
+			//Science Ranking Start
 			for (int i=0;i<16;i++)
 			{
-				System.out.println(roll_no[i] +"\t"+names[i]+"\t"+Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
+				total_marks[i]= Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
 						+PhysicsMarks[i]+ChemistryMarks[i]+BiologyMarks[i]+CommerceMarks[i]
-						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/9));
-				
+						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/9);
+								
 			}
+			double sorted_total[] = new double[20];			
+			for (int p1=0;p1<16;p1++)
+			{
+				sorted_total[p1] = total_marks[p1];
+			}
+			for (int i=0;i<16;i++)
+			{
+				for (int j = i+1 ; j <16;j++)
+				{
+					if(sorted_total[j]>sorted_total[i])
+					{
+					double temp = sorted_total[i];
+					sorted_total[i]=sorted_total[j];
+					sorted_total[j]=temp;
+					}
+				}
+				//System.out.println(sorted_total[i]);				
+			}
+					
+			for (int i = 0; i<16;i++)
+			{
+				
+					if (sorted_total[0]==total_marks[i]) science_first = names[i];
+					if (sorted_total[1]==total_marks[i]) science_second = names[i];
+					if (sorted_total[2]==total_marks[i]) science_third = names[i];
+			}
+			System.out.println("Science First Ranker is :"+ science_first +" with total %  "+sorted_total[0]);
+			System.out.println("Science Second Ranker is :"+ science_second +" with total %  "+sorted_total[1]);
+			System.out.println("Science Thrid Ranker is :"+ science_third +" with total %  "+sorted_total[2]);
+			//Science Ranking Complete
+			
+			//Commerce Ranking Start
+			for (int i=16;i<20;i++)
+			{
+				total_marks[i]= Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i]
+						+PhysicsMarks[i]+ChemistryMarks[i]+BiologyMarks[i]+CommerceMarks[i]
+						+YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/7);
+								
+			}
+					
+			for (int p1=0;p1<5;p1++)
+			{
+				sorted_total[p1] = total_marks[p1+15];
+			}
+			for (int i=0;i<5;i++)
+			{
+				for (int j = i+1 ; j <5;j++)
+				{
+					if(sorted_total[j]>sorted_total[i])
+					{
+					double temp = sorted_total[i];
+					sorted_total[i]=sorted_total[j];
+					sorted_total[j]=temp;
+					}
+				}
+				//System.out.println(sorted_total[i]);				
+			}
+					
+			for (int i = 0; i<5;i++)
+			{
+				
+					if (sorted_total[0]==total_marks[i+15]) commerce_first = names[i+15];
+					if (sorted_total[1]==total_marks[i+15]) commerce_second = names[i+15];
+					if (sorted_total[2]==total_marks[i+15]) commerce_third = names[i+15];
+			}
+			System.out.println("Commerce First Ranker is :"+ commerce_first +" with total %  "+sorted_total[0]);
+			System.out.println("Commerce Second Ranker is :"+ commerce_second +" with total %  "+sorted_total[1]);
+			System.out.println("Commerce Thrid Ranker is :"+ commerce_third +" with total %  "+sorted_total[2]);
+			
+			//Commerce ranking ends
+			break;
+			
+			
+		case 7://See marks of a particular student
+			System.out.println("Please enter Roll No of student");
+			Scanner scan1 = new Scanner(System.in);
+			int k = scan.nextInt();
+			int i = k-1;
+			System.out.println("RollNo"+"\t"+"Name"+"\t"+"\t"+"Maths"+"\t"+"History"+"\t"+
+					"Geog"+"\t"+"English"+"\t"+"Hindi"+"\t"+"Physics"+"\t"+
+					"Chemi"+"\t"+"Biology"+"\t"+"Commc"+"\t"+"Yoga"+"\t"+
+					"Arts"+"\t"+"Comptr"+"\t"+"Cookery");
+			System.out.println(roll_no[i] +"\t"+names[i]+"\t"+"\t"+MathsMarks[i]+"\t"+HistoryMarks[i]+"\t"+GeographyMarks[i]+"\t"+EnglishMarks[i]+"\t"+HindiMarks[i]
+					+"\t"+PhysicsMarks[i]+"\t"+ChemistryMarks[i]+"\t"+BiologyMarks[i]+"\t"+CommerceMarks[i]
+					+"\t"+YogaMarks[i]+"\t"+ArtsMarks[i]+"\t"+ComputerMarks[i]	+"\t"+CookeryMarks[i]);
 			
 			break;
+			
 		default : 
 			System.out.println("Invalid Option");
 			break;
