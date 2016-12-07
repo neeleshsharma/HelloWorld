@@ -1,0 +1,403 @@
+Option1
+******************************************************************************
+1
+--------------------------------------------------
+RollNo	Name
+--------------------------------------------------
+1	Aasthaa Bohra         
+2	Anaya Gandhi          
+3	Avanti Morarka        
+4	Diya Vora             
+5	Kaavi Banker          
+6	Liyana Modi           
+7	Muskaan Lucknowwala   
+8	Neha Thachil          
+9	Pavitra Khaitan       
+10	Priyanka Babla        
+11	Reet Patel            
+12	Rhea Kohli            
+13	Saachi Wadhwa         
+14	Shloka Chabria        
+15	Trisha Aggarwal       
+16	Aariana Taraporewala  
+17	Aashvi Vasa           
+18	Anaya Vora            
+19	Anushka Sethy         
+20	Arsshia Sharma        
+21	Ateka Tambawala       
+22	Disti Sanghvi         
+23	Kashish Bajaj         
+24	Kareena Desai         
+25	Khushi Agarwal        
+26	Khushi Parekh         
+27	Khushi Shah           
+28	Mahek Devnani         
+29	Mallari Shroff        
+30	Miti Shah             
+31	Parizad Banker        
+32	Rhea Gurnani          
+33	Rishita Jain          
+34	Sakshmi Bhansali      
+35	Sanaya Sheth          
+36	Tania Chandrapota     
+***************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+******************************************************************************
+
+
+Option2
+
+2
+----------------------------------------------------------------------------------------------------------------------------
+RollNo	Name 				English	Hindi	History	Geography Maths	Science	Optional Subject Optional Marks
+----------------------------------------------------------------------------------------------------------------------------
+1	Aasthaa Bohra         		62.0	68.0	72.0	73.0	 80.0	97.0	Computer		95.0
+
+2	Anaya Gandhi          		51.0	96.0	68.0	94.0	 67.0	66.0	Yoga    		81.0
+
+3	Avanti Morarka        		59.0	67.0	72.0	74.0	 98.0	72.0	Yoga    		88.0
+
+4	Diya Vora             		82.0	54.0	69.0	50.0	 94.0	66.0	Yoga    		73.0
+
+5	Kaavi Banker          		73.0	66.0	50.0	73.0	 74.0	66.0	Yoga    		96.0
+
+6	Liyana Modi           		82.0	99.0	93.0	80.0	 60.0	88.0	Cookery 		89.0
+
+7	Muskaan Lucknowwala   		71.0	54.0	84.0	62.0	 71.0	78.0	Yoga    		64.0
+
+8	Neha Thachil          		80.0	77.0	90.0	49.0	 71.0	96.0	Cookery 		69.0
+
+9	Pavitra Khaitan       		73.0	66.0	56.0	95.0	 84.0	57.0	Computer		52.0
+
+10	Priyanka Babla        		81.0	96.0	55.0	52.0	 80.0	79.0	Yoga    		54.0
+
+11	Reet Patel            		78.0	78.0	72.0	96.0	 84.0	73.0	Arts    		67.0
+
+12	Rhea Kohli            		61.0	57.0	78.0	53.0	 85.0	61.0	Cookery 		82.0
+
+13	Saachi Wadhwa         		67.0	95.0	88.0	73.0	 58.0	75.0	Yoga    		59.0
+
+14	Shloka Chabria        		75.0	54.0	64.0	85.0	 99.0	73.0	Cookery 		74.0
+
+15	Trisha Aggarwal       		95.0	51.0	59.0	96.0	 85.0	78.0	Yoga    		76.0
+
+----------------------------------------------------------------------------------------------------------------------------
+RollNo	Name 				English	Hindi	History	Geography Maths	Commerce Optional Subject	Optional Marks
+----------------------------------------------------------------------------------------------------------------------------
+16	Aariana Taraporewala  		93.0	56.0	63.0	77.0	 71.0	86.0		Arts    	59.0
+
+17	Aashvi Vasa           		66.0	57.0	68.0	85.0	 95.0	58.0		Yoga    	87.0
+
+18	Anaya Vora            		59.0	61.0	89.0	73.0	 75.0	80.0		Arts    	76.0
+
+19	Anushka Sethy         		64.0	82.0	80.0	57.0	 86.0	62.0		Cookery 	79.0
+
+20	Arsshia Sharma        		98.0	85.0	61.0	95.0	 76.0	55.0		Cookery 	57.0
+
+21	Ateka Tambawala       		78.0	76.0	56.0	97.0	 94.0	71.0		Arts    	74.0
+
+22	Disti Sanghvi         		82.0	86.0	51.0	64.0	 56.0	89.0		Yoga    	58.0
+
+23	Kashish Bajaj         		87.0	80.0	75.0	97.0	 97.0	83.0		Cookery 	85.0
+
+24	Kareena Desai         		89.0	62.0	63.0	58.0	 83.0	78.0		Arts    	71.0
+
+25	Khushi Agarwal        		92.0	57.0	89.0	77.0	 96.0	58.0		Yoga    	54.0
+
+26	Khushi Parekh         		81.0	50.0	49.0	55.0	 83.0	70.0		Yoga    	62.0
+
+27	Khushi Shah           		84.0	51.0	85.0	56.0	 92.0	73.0		Arts    	64.0
+
+28	Mahek Devnani         		98.0	77.0	77.0	93.0	 86.0	52.0		Cookery 	57.0
+
+29	Mallari Shroff        		60.0	53.0	94.0	82.0	 70.0	95.0		Yoga    	95.0
+
+30	Miti Shah             		62.0	55.0	67.0	83.0	 50.0	90.0		Yoga    	89.0
+
+31	Parizad Banker        		91.0	58.0	57.0	91.0	 51.0	60.0		Cookery 	75.0
+
+32	Rhea Gurnani          		56.0	60.0	65.0	86.0	 93.0	65.0		Cookery 	86.0
+
+33	Rishita Jain          		74.0	69.0	66.0	72.0	 85.0	69.0		Arts    	54.0
+
+34	Sakshmi Bhansali      		80.0	56.0	98.0	54.0	 62.0	65.0		Arts    	58.0
+
+35	Sanaya Sheth          		94.0	69.0	59.0	88.0	 82.0	88.0		Arts    	81.0
+
+36	Tania Chandrapota     		88.0	59.0	93.0	71.0	 84.0	73.0		Cookery 	68.0
+
+****************************************************************************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
+
+
+Option3
+
+****************************************************************
+3
+---------------------------------------------------------------
+RollNo	Name         		%	Remarks
+---------------------------------------------------------------
+1	Aasthaa Bohra         	78.0	Well Tried
+
+2	Anaya Gandhi          	75.0	Well Tried
+
+3	Avanti Morarka        	76.0	Well Tried
+
+4	Diya Vora             	70.0	Can Do Better
+
+5	Kaavi Banker          	71.0	Can Do Better
+
+6	Liyana Modi           	72.0	Can Do Better
+
+7	Muskaan Lucknowwala   	69.0	Can Do Better
+
+8	Neha Thachil          	66.0	Can Do Better
+
+9	Pavitra Khaitan       	69.0	Can Do Better
+
+10	Priyanka Babla        	71.0	Can Do Better
+
+11	Reet Patel            	78.0	Well Tried
+
+12	Rhea Kohli            	56.0	Study Hard
+
+13	Saachi Wadhwa         	74.0	Can Do Better
+
+14	Shloka Chabria        	64.0	Study Hard
+
+15	Trisha Aggarwal       	77.0	Well Tried
+
+16	Aariana Taraporewala  	82.0	Well Tried
+
+17	Aashvi Vasa           	85.0	Very Good
+
+18	Anaya Vora            	86.0	Very Good
+
+19	Anushka Sethy         	75.0	Well Tried
+
+20	Arsshia Sharma        	75.0	Well Tried
+
+21	Ateka Tambawala       	87.0	Very Good
+
+22	Disti Sanghvi         	80.0	Well Tried
+
+23	Kashish Bajaj         	82.0	Well Tried
+
+24	Kareena Desai         	84.0	Well Tried
+
+25	Khushi Agarwal        	86.0	Very Good
+
+26	Khushi Parekh         	78.0	Well Tried
+
+27	Khushi Shah           	86.0	Very Good
+
+28	Mahek Devnani         	80.0	Well Tried
+
+29	Mallari Shroff        	89.0	Very Good
+
+30	Miti Shah             	80.0	Well Tried
+
+31	Parizad Banker        	66.0	Can Do Better
+
+32	Rhea Gurnani          	69.0	Can Do Better
+
+33	Rishita Jain          	78.0	Well Tried
+
+34	Sakshmi Bhansali      	77.0	Well Tried
+
+35	Sanaya Sheth          	90.0	Very Good
+
+36	Tania Chandrapota     	80.0	Well Tried
+
+**************************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
+
+
+option 4
+
+4
+****************************************************************
+Maximum Maths Marks :     	Shloka Chabria        99.0
+
+Maximum History Marks :    	Sakshmi Bhansali      98.0
+
+Maximum Geography Marks : 	Kashish Bajaj         97.0
+
+Maximum English Marks :    	Mahek Devnani         98.0
+
+Maximum Hindi Marks :      	Liyana Modi           99.0
+
+Maximum Science Marks :    	Aasthaa Bohra         97.0
+
+Maximum Commerce Marks :  	Mallari Shroff        95.0
+
+Maximum Yoga Marks :      	Kaavi Banker          96.0
+
+Maximum Arts Marks :       	Sanaya Sheth          81.0
+
+Maximum Computer Marks :   	Aasthaa Bohra         95.0
+
+Maximum Cookery Marks :   	Liyana Modi           89.0
+
+****************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
+
+Option 5
+5
+****************************************************************
+Science First Ranker is :Reet Patel 78.286%
+
+Science Second Ranker is :Aasthaa Bohra 78.143%
+
+Science Third Ranker is :Trisha Aggarwal 77.143%
+
+------------------------------------------------------------------
+Commerce First Ranker is :Sanaya Sheth 90.0%
+
+Commerce Second Ranker is :Mallari Shroff 89.0%
+
+Commerce Third Ranker is :Ateka Tambawala 86.857%
+
+****************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
+
+
+
+Option 6
+
+6
+Please enter Roll No of student
+1
+------------------------------
+RollNo   	1
+Name     	Aasthaa Bohra         
+English  	62.0
+Hindi    	68.0
+History  	72.0
+Geography	73.0
+Maths    	80.0
+Science  	97.0
+Computer  	95.0
+*****************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
+
+
+Option 7
+
+7
+Enter 1 for Modifying name and 2 for modifying Marks
+1
+Please enter Roll No1 of student
+1
+Please enter New Name
+Bohra Astha
+------------------------------
+RollNo   	1
+Name     	Bohra Astha         
+English  	62.0
+Hindi    	68.0
+History   	72.0
+Geography	73.0
+Maths    	80.0
+Science  	97.0
+Computer	95.0
+*****************************************************************
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+
+
+
+Option 7 : 2
+
+7
+Enter 1 for Modifying name and 2 for modifying Marks
+2
+Please enter Roll No of student
+1
+RollNo	1
+Name	Bohra Astha         
+Overall % 78.0
+1 English	62.0
+2 Hindi	68.0
+3 History	72.0
+4 Geography	73.0
+5 Maths	80.0
+6 Science	97.0
+7 Computer	95.0
+Please select Subject to modify marks
+1
+Please Enter new marks
+100
+Marks Updated Succesfully
+RollNo	1
+Name	Bohra Astha         
+Overall % 84.0
+1 English	100.0
+2 Hindi	68.0
+3 History	72.0
+4 Geography	73.0
+5 Maths	80.0
+6 Science	97.0
+7 Computer	95.0
+----------------------------------------------------------------
+1:See the list of Students roll no. wise
+2:See Marks of all Subjects
+3:See Percentage of all Students
+4:Display highest marks in each subject
+5:Display Overall percentagewise Top 3 rankers
+6:See marks of a particular student: Enter Roll no.
+7:Modify Details 
+8.Exit
+****************************************************************
