@@ -952,16 +952,16 @@ public class ReportCard
                 {
 
                     if (sorted_total[0]==total_marks[i])
-
-                    science_first = names[i];
-
+                   
+                     science_first = names[i];                     
+                    
                     if (sorted_total[1]==total_marks[i])
-
-                    science_second = names[i];
-
+                    
+                    	science_second = names[i];
+                    
                     if (sorted_total[2]==total_marks[i])
 
-                    science_third = names[i];
+                     science_third = names[i];
 
                 }
 
@@ -1584,7 +1584,6 @@ public class ReportCard
                 	break;
 
             
-
             
 
             }
