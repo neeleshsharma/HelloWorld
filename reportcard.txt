@@ -1,765 +1,1600 @@
+
+
 import java.util.*;
+
 public class ReportCard
+
 {
+
     public static void main(String args[])
+
     {
+
         String [] names1 = {"Aasthaa Bohra ","Anaya Gandhi ","Avanti Morarka ","Diya Vora ","Kaavi Banker " , "Liyana Modi ","Muskaan Lucknowwala ","Neha Thachil ","Pavitra Khaitan ","Priyanka Babla " , "Reet Patel ","Rhea Kohli ","Saachi Wadhwa ","Shloka Chabria ","Trisha Aggarwal ", "Aariana Taraporewala","Aashvi Vasa ","Anaya Vora ","Anushka Sethy ","Arsshia Sharma ","" + "Ateka Tambawala ","Disti Sanghvi ","Kashish Bajaj ","Kareena Desai ", "Khushi Agarwal ","Khushi Parekh ","Khushi Shah ","Mahek Devnani ","Mallari Shroff ", "Miti Shah ","Parizad Banker ","Rhea Gurnani ","Rishita Jain ","Sakshmi Bhansali ", "Sanaya Sheth ","Tania Chandrapota "};
+
         String names[] = new String[36];
+
         String blank = " ";
+
         int max_length = 20;
+
         int spaces_to_add;
+
         for (int i = 0;i<36;i++)
+
         {
+
         spaces_to_add = max_length-names1[i].length();
+
         //keep the names length constant.
+
         for (int j = 0 ; j<=spaces_to_add;j++)
+
         {
+
          blank = blank + " ";
+
         }
+
         names[i]=names1[i]+blank;
+
         blank = " ";
+
         }
+
         int option;
+
         String optional_subject="";
+
         double optional_marks=0.0;
+
         int []roll_no = new int[36];
+
         double[] MathsMarks = new double[36];
+
         double[] HistoryMarks = new double[36];
+
         double[] GeographyMarks = new double[36];
+
         double[] EnglishMarks = new double[36];
+
         double[] HindiMarks = new double[36];
+
         double[] ScienceMarks = new double[36];
+
         double[] CommerceMarks = new double[36];
+
         double[] YogaMarks = new double[36];
+
         double[] ArtsMarks = new double[36];
+
         double[] ComputerMarks = new double[36];
+
         double[] CookeryMarks = new double[36];
+
         Scanner scan = new Scanner(System.in);
+
         for (int i = 0 ; i<36 ; i++)
+
         {
+
             roll_no[i] = i+1;
+
         }
+
         for (int i = 0 ; i < 36 ; i++)
+
         {
-            MathsMarks [i] = Math.round(Math.random()*50)+50;
-            HistoryMarks [i] = Math.round(Math.random()*50)+50;
-            GeographyMarks [i] = Math.round(Math.random()*50)+50;
-            EnglishMarks [i] = Math.round(Math.random()*50)+50;
-            HindiMarks [i] = Math.round(Math.random()*50)+50;
-            ScienceMarks [i] = Math.round(Math.random()*50)+50;
+
+            MathsMarks [i] = Math.round(Math.random()*50)+49;
+
+            HistoryMarks [i] = Math.round(Math.random()*50)+49;
+
+            GeographyMarks [i] = Math.round(Math.random()*50)+49;
+
+            EnglishMarks [i] = Math.round(Math.random()*50)+49;
+
+            HindiMarks [i] = Math.round(Math.random()*50)+49;
+
+            ScienceMarks [i] = Math.round(Math.random()*50)+49;
+
         } //Manual entry as no logic is defined.
+
         int p = 0;
+
         char[] grp2 ={'S','S','S','S','S','S','S','S','S','S','S','S','S','S','S','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C','C'};
+
         char [] grp3 = {'C','Y','Y','Y','Y','K','Y', 'K','C','Y','A','K','Y','K', 'Y','A','Y','A','K','K','A', 'Y','K','A','Y','Y','A','K', 'Y','Y','K','K','A','A','A', 'K'};
+
         for (int i = 0; i<36;i++)
+
         {
+
             switch (grp3[i])
+
             {
-                case 'Y': YogaMarks[i] = Math.round(Math.random()*50)+50;
+
+                case 'Y': YogaMarks[i] = Math.round(Math.random()*50)+49;
+
                 break;
-                case 'C': ComputerMarks[i]= Math.round(Math.random()*50)+50;
+
+                case 'C': ComputerMarks[i]= Math.round(Math.random()*50)+49;
+
                 break;
-                case 'K': CookeryMarks[i]= Math.round(Math.random()*50)+50;
+
+                case 'K': CookeryMarks[i]= Math.round(Math.random()*50)+49;
+
                 break;
-                case 'A': ArtsMarks[i]= Math.round(Math.random()*50)+50;
+
+                case 'A': ArtsMarks[i]= Math.round(Math.random()*50)+49;
+
                 break;
+
             }
+
         }
+
         for (int i = 15 ; i < 36 ; i++)
+
         {
-            CommerceMarks [i] = Math.round(Math.random()*50)+50;
+
+            CommerceMarks [i] = Math.round(Math.random()*50)+49;
+
         }
+
         System.out.println("****************************************************************");
+
         System.out.println("1:See the list of Students roll no. wise");
+
         System.out.println("2:See Marks of all Subjects");
+
         System.out.println("3:See Percentage of all Students");
+
         System.out.println("4:Display highest marks in each subject");
+
         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
         System.out.println("7:Modify Details " );
+        System.out.println("8.Exit");
+
         System.out.println("****************************************************************");
+
         do {
+
             int ch = scan.nextInt();
+
             option = ch;
+
             switch(ch)
+
             {
-                case 1: 
+
+                case 1:
+
                 System.out.println("--------------------------------------------------");
+
                 System.out.println("RollNo"+"\t"+"Name");
+
                 System.out.println("--------------------------------------------------");
+
                 for (int i=0;i<names.length;i++)
+
                 {
+
                     System.out.println(roll_no[i]+"\t"+ names[i]);
+
                 }
+
                 System.out.println("***************************************************");
+
                 System.out.println("1:See the list of Students roll no. wise");
+
                 System.out.println("2:See Marks of all Subjects");
+
                 System.out.println("3:See Percentage of all Students");
+
                 System.out.println("4:Display highest marks in each subject");
+
                 System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                 System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                 System.out.println("7:Modify Details " );
+                System.out.println("8.Exit");
+
                 System.out.println("******************************************************************************");
+
                 break;
-                    case 2: 
-                    	System.out.println("----------------------------------------------------------------------------------------------------------------------------");
-                    	System.out.println("RollNo"+"\t"+"Name "+"\t"+"\t"+"\t"+"\t"+"English"+"\t"+"Hindi"+"\t"+ "History"+"\t"+"Geography"+" "+"Maths"+"\t"+"Science"+ "\t"+"Optional Subject"+" "+"Optional Marks");
-                    	System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+
+                    case 2:
+
+                    System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+
+                    System.out.println("RollNo"+"\t"+"Name "+"\t"+"\t"+"\t"+"\t"+"English"+"\t"+"Hindi"+"\t"+ "History"+"\t"+"Geography"+" "+"Maths"+"\t"+"Science"+ "\t"+"Optional Subject"+" "+"Optional Marks");
+
+                    System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+
                     for (int i=0;i<15;i++)
+
                     {
+
                      switch (grp3[i])
+
                         {
+
                             case 'Y': optional_subject = "Yoga    ";optional_marks = YogaMarks[i] ;
+
                             break;
+
                             case 'C': optional_subject="Computer";optional_marks = ComputerMarks[i];
+
                             break;
+
                             case 'K': optional_subject="Cookery ";optional_marks=CookeryMarks[i];;
+
                             break;
+
                             case 'A': optional_subject="Arts    ";optional_marks=ArtsMarks[i];
+
                             break;
+
                         }
+
                         System.out.println(roll_no[i] +"\t"+names[i]+"\t"+"\t"+EnglishMarks[i]+"\t"+HindiMarks[i]+"\t"+HistoryMarks[i]+"\t"+GeographyMarks[i]+"\t"+" "+MathsMarks[i] +"\t"+ScienceMarks[i]+"\t"+optional_subject+"\t"+"\t"+optional_marks+"\n");
+
                     }
+
                     System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+
                     System.out.println("RollNo"+"\t"+"Name "+"\t"+"\t"+"\t"+"\t"+"English"+"\t"+"Hindi"+"\t"+ "History"+"\t"+"Geography"+" "+"Maths"+"\t"+"Commerce"+ " "+"Optional Subject"+"\t"+"Optional Marks");
+
                     System.out.println("----------------------------------------------------------------------------------------------------------------------------");
+
                     for (int i=15;i<36;i++)
+
                     {
+
                      switch (grp3[i])
+
                         {
+
                             case 'Y': optional_subject = "Yoga    ";optional_marks = YogaMarks[i] ;
+
                             break;
+
                             case 'C': optional_subject="Computer";optional_marks = ComputerMarks[i];
+
                             break;
+
                             case 'K': optional_subject="Cookery ";optional_marks=CookeryMarks[i];;
+
                             break;
+
                             case 'A': optional_subject="Arts    ";optional_marks=ArtsMarks[i];
+
                             break;
+
                         }
+
                         System.out.println(roll_no[i] +"\t"+names[i]+"\t"+"\t"+EnglishMarks[i]+"\t"+HindiMarks[i]+"\t"+HistoryMarks[i]+"\t"+GeographyMarks[i]+"\t"+" "+MathsMarks[i] +"\t"+CommerceMarks[i] +"\t"+"\t"+optional_subject+"\t"+optional_marks+"\n");
+
                         
+
                     }
+
                     System.out.println("****************************************************************************************************************************");
+
                     System.out.println("1:See the list of Students roll no. wise");
+
                     System.out.println("2:See Marks of all Subjects");
+
                     System.out.println("3:See Percentage of all Students");
+
                     System.out.println("4:Display highest marks in each subject");
+
                     System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                     System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                     System.out.println("7:Modify Details " );
+                    System.out.println("8.Exit");
+
                     System.out.println("****************************************************************");
+
                     break;
+
                     case 3:
-                    	System.out.println("---------------------------------------------------------------");
-                    System.out.println("RollNo"+"\t"+"Name "+"\t"+"\t"+"%"+"\t"+"Remarks");
+
                     System.out.println("---------------------------------------------------------------");
+
+                    System.out.println("RollNo"+"\t"+"Name         "+"\t"+"\t"+"%"+"\t"+"Remarks");
+
+                    System.out.println("---------------------------------------------------------------");
+
                     for (int i=0;i<36;i++)
+
                     {
+
                         String display = "";
+
                         double percentage = Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i] +ScienceMarks[i]+CommerceMarks[i] +YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])/7);
+
                         if (percentage >=95.00 && percentage <=100.0 )display = "Excellent";
+
                         if (percentage >=85.00 && percentage <95.0 )display = "Very Good";
+
                         if (percentage >=75.00 && percentage <85.0 )display = "Well Tried";
+
                         if (percentage >=65.00 && percentage <75.0 )display = "Can Do Better";
+
                         if (percentage >=00.00 && percentage <65.0 )display = "Study Hard";
+
                         System.out.println(roll_no[i] +"\t"+names[i]+"\t"+percentage+"\t"+display+"\n");
+
                     }
+
                     System.out.println("**************************************************************************");
+
                     System.out.println("1:See the list of Students roll no. wise");
+
                     System.out.println("2:See Marks of all Subjects");
+
                     System.out.println("3:See Percentage of all Students");
+
                     System.out.println("4:Display highest marks in each subject");
+
                     System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                     System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                     System.out.println("7:Modify Details " );
+                    System.out.println("8.Exit");
+
                     System.out.println("****************************************************************");
+
                     break;
+
                     case 4://dispaly highest marks in each subject
+
                     double sortedmarks[] = new double[36];
+
                     String highest_name = "";
+
                     for (int p1=0;p1<36;p1++)
+
                     {
+
                         sortedmarks[p1] = MathsMarks[p1];
+
                     }
+
                     for (int i=0;i<36;i++)
+
                     {
+
                     for (int j = i+1 ; j <36;j++)
+
                     {
+
                         if(sortedmarks[j]>sortedmarks[i])
+
                         {
+
                             double temp = sortedmarks[i];
+
                             sortedmarks[i]=sortedmarks[j];
+
                             sortedmarks[j]=temp;
+
                         }
+
                     }
+
                     }
+
                 for (int i = 0 ; i<36 ; i++)
+
                 {
+
                     if (sortedmarks[0] == MathsMarks[i])
+
                     highest_name = names[i];
+
                 }
+
                 System.out.println("****************************************************************");
-                System.out.println("Maximum Maths Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+                System.out.println("Maximum Maths Marks :     "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
                 //Same logic to be used for other subject marks.
+
                 //History starts
+
                 for (int p1=0;p1<36;p1++)
+
                 {
+
                     sortedmarks[p1] = HistoryMarks[p1];
+
                 }
+
                 for (int i=0;i<36;i++)
+
                 {
+
                     for (int j = i+1 ; j <36;j++)
+
                     {
+
                         if(sortedmarks[j]>sortedmarks[i])
+
                         {double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                     }
+
                 }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == HistoryMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum History Marks : "+"\t"+highest_name+sortedmarks[0] +"\n");
+
+            System.out.println("Maximum History Marks :    "+"\t"+highest_name+sortedmarks[0] +"\n");
+
             //History ends //Geography starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = GeographyMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == GeographyMarks[i])
+
                 highest_name = names[i];
+
             }
+
             System.out.println("Maximum Geography Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //Geography end //English Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = EnglishMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == EnglishMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum English Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+            System.out.println("Maximum English Marks :    "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //English Ends //Hindi Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = HindiMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == HindiMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Hindi Marks : "+"\t"+highest_name+sortedmarks[0] +"\n");
+
+            System.out.println("Maximum Hindi Marks :      "+"\t"+highest_name+sortedmarks[0] +"\n");
+
             //Hindi Ends //Science Starts
+
             for (int p1=0;p1<16;p1++)
+
             {
+
                 sortedmarks[p1] = ScienceMarks[p1];
+
             }
+
             for (int i=0;i<=16;i++)
+
             {
+
                 for (int j = i+1 ; j <=16;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<16 ; i++)
+
             {
+
                 if (sortedmarks[0] == ScienceMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Science Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+            System.out.println("Maximum Science Marks :    "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //Science Ends //Commerce Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = CommerceMarks[p1];
+
             } for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == CommerceMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Commerce Marks : "+"\t"+highest_name+sortedmarks[0] +"\n");
+
+            System.out.println("Maximum Commerce Marks :  "+"\t"+highest_name+sortedmarks[0] +"\n");
+
             //Commerce Ends //Yoga Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = YogaMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == YogaMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Yoga Marks : "+"\t"+highest_name+sortedmarks[0] +"\n");
+
+            System.out.println("Maximum Yoga Marks :      "+"\t"+highest_name+sortedmarks[0] +"\n");
+
             //Yoga Ends //Arts Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = ArtsMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == ArtsMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Arts Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+            System.out.println("Maximum Arts Marks :       "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //Arts Ends //Computer Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = ComputerMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == ComputerMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Computer Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+            System.out.println("Maximum Computer Marks :   "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //Copmuter Ends //Cookery Starts
+
             for (int p1=0;p1<36;p1++)
+
             {
+
                 sortedmarks[p1] = CookeryMarks[p1];
+
             }
+
             for (int i=0;i<36;i++)
+
             {
+
                 for (int j = i+1 ; j <36;j++)
+
                 {
+
                     if(sortedmarks[j]>sortedmarks[i])
+
                     {
+
                         double temp = sortedmarks[i];
+
                         sortedmarks[i]=sortedmarks[j];
+
                         sortedmarks[j]=temp;
+
                     }
+
                 }
+
             }
+
             for (int i = 0 ; i<36 ; i++)
+
             {
+
                 if (sortedmarks[0] == CookeryMarks[i])
+
                 highest_name = names[i];
+
             }
-            System.out.println("Maximum Cookery Marks : "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
+            System.out.println("Maximum Cookery Marks :   "+"\t"+highest_name+sortedmarks[0]+"\n" );
+
             //Cookery Ends
+
             System.out.println("****************************************************************");
+
             System.out.println("1:See the list of Students roll no. wise");
+
             System.out.println("2:See Marks of all Subjects");
+
             System.out.println("3:See Percentage of all Students");
+
             System.out.println("4:Display highest marks in each subject");
+
             System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
             System.out.println("6:See marks of a particular student: Enter Roll no.");
+
             System.out.println("7:Modify Details " );
+            System.out.println("8.Exit");
+
             System.out.println("****************************************************************");
+
             break;
+
             case 5:String science_first ="";
+
             String science_second="";
+
             String science_third="";
+
             String commerce_first="";
+
             String commerce_second="";
+
             String commerce_third="";
+
             double[] total_marks = new double[36];
+
             //Science Ranking Start
+
             for (int i=0;i<15;i++)
+
             {
+
                 total_marks[i]= Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i] +ScienceMarks[i]+CommerceMarks[i] +YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])*1000.0/7)/1000.0;
+
             }
+
             double sorted_total[] = new double[36];
+
             for (int p1=0;p1<15;p1++)
+
             {
+
                 sorted_total[p1] = total_marks[p1];
+
             }
+
             for (int i=0;i<15;i++)
+
             {
+
                 for (int j = i+1 ; j <15;j++)
+
                 {
+
                     if(sorted_total[j]>sorted_total[i])
+
                     {
+
                         double temp = sorted_total[i];
+
                         sorted_total[i]=sorted_total[j];
+
                         sorted_total[j]=temp; }
+
                     }
+
                     //System.out.println(sorted_total[i]);
+
                 }
+
                 for (int i = 0; i<15;i++)
+
                 {
+
                     if (sorted_total[0]==total_marks[i])
+
                     science_first = names[i];
+
                     if (sorted_total[1]==total_marks[i])
+
                     science_second = names[i];
+
                     if (sorted_total[2]==total_marks[i])
+
                     science_third = names[i];
+
                 }
+
                 System.out.println("****************************************************************");
-                System.out.println("Science First Ranker is :"+ science_first +"with total % "+sorted_total[0]+"\n");
-                System.out.println("Science Second Ranker is :"+ science_second +"with total % "+sorted_total[1]+"\n");
-                System.out.println("Science Thrid Ranker is :"+ science_third +"with total % "+sorted_total[2]+"\n"); //Science Ranking Complete //Commerce Ranking Start
+
+                System.out.println("Science First Ranker is :"+ science_first.trim() +" " +sorted_total[0]+"%"+"\n");
+
+                System.out.println("Science Second Ranker is :"+ science_second.trim() +" "+sorted_total[1]+"%"+"\n");
+
+                System.out.println("Science Third Ranker is :"+ science_third.trim() +" "+sorted_total[2]+"%"+"\n"); //Science Ranking Complete //Commerce Ranking Start
+
                 System.out.println("------------------------------------------------------------------");
+
                 for (int i=16;i<36;i++)
+
                 {
+
                     total_marks[i]= Math.round((MathsMarks[i]+HistoryMarks[i]+GeographyMarks[i]+EnglishMarks[i]+HindiMarks[i] +ScienceMarks[i]+CommerceMarks[i] +YogaMarks[i]+ArtsMarks[i]+ComputerMarks[i])*1000.0/7)/1000.0;
+
                 }
+
                 for (int p1=0;p1<20;p1++)
+
                 {
+
                     sorted_total[p1] = total_marks[p1+15];
+
                 }
+
                 for (int i=0;i<20;i++)
+
                 {
+
                     for (int j = i+1 ; j <20;j++)
+
                     {
+
                         if(sorted_total[j]>sorted_total[i])
+
                         {
+
                             double temp = sorted_total[i];
+
                             sorted_total[i]=sorted_total[j];
+
                             sorted_total[j]=temp;
+
                         }
+
                     }
+
                     //System.out.println(sorted_total[i]);
+
                 }
+
                 for (int i = 0; i<20;i++)
+
                 {
+
                     if (sorted_total[0]==total_marks[i+15])
+
                     commerce_first = names[i+15];
+
                     if (sorted_total[1]==total_marks[i+15])
+
                     commerce_second = names[i+15];
+
                     if (sorted_total[2]==total_marks[i+15])
+
                     commerce_third = names[i+15];
+
                 }
-                System.out.println("Commerce First Ranker is :"+ commerce_first +" with total % "+sorted_total[0]+"\n");
-                System.out.println("Commerce Second Ranker is :"+ commerce_second +" with total % "+sorted_total[1]+"\n");
-                System.out.println("Commerce Thrid Ranker is :"+ commerce_third +" with total % "+sorted_total[2]+"\n");
+
+                System.out.println("Commerce First Ranker is :"+ commerce_first.trim() +" "+sorted_total[0]+"%"+"\n");
+
+                System.out.println("Commerce Second Ranker is :"+ commerce_second.trim() +" "+sorted_total[1]+"%"+"\n");
+
+                System.out.println("Commerce Third Ranker is :"+ commerce_third.trim() +" "+sorted_total[2]+"%"+"\n");
+
                 //Commerce ranking ends
+
                 System.out.println("****************************************************************");
+
                 System.out.println("1:See the list of Students roll no. wise");
+
                 System.out.println("2:See Marks of all Subjects");
+
                 System.out.println("3:See Percentage of all Students");
+
                 System.out.println("4:Display highest marks in each subject");
+
                 System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                 System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                 System.out.println("7:Modify Details " );
+                System.out.println("8.Exit");
+
                 System.out.println("****************************************************************");
+
                 break;
+
                 case 6://See marks of a particular student
+
                 System.out.println("Please enter Roll No of student");
+
                 Scanner scan1 = new Scanner(System.in);
+
                 int k = scan.nextInt();
+
                 int i = k-1;
+
                 String science_commerce = "";
+
                 double science_commerce_marks=0.0;
+
                 switch (grp3[i])
+
                 {
-                    case 'Y': optional_subject = "Yoga ";optional_marks = YogaMarks[i] ;
+
+                    case 'Y': optional_subject = "Yoga     ";optional_marks = YogaMarks[i] ;
+
                     break;
-                    case 'C': optional_subject="Computer";optional_marks = ComputerMarks[i];
+
+                    case 'C': optional_subject="Computer  ";optional_marks = ComputerMarks[i];
+
                     break;
-                    case 'K': optional_subject="Cookery ";optional_marks=CookeryMarks[i];;
+
+                    case 'K': optional_subject="Cookery   ";optional_marks=CookeryMarks[i];;
+
                     break;
-                    case 'A': optional_subject="Arts ";optional_marks=ArtsMarks[i];
+
+                    case 'A': optional_subject="Arts     ";optional_marks=ArtsMarks[i];
+
                     break;
+
                 }
+
                 switch (grp2[i])
+
                 {
-                case 'S': science_commerce = "Science";science_commerce_marks=ScienceMarks[i];break;
-                case 'C': science_commerce = "Commerce";science_commerce_marks=CommerceMarks[i];break;
+
+                case 'S': science_commerce = "Science  ";science_commerce_marks=ScienceMarks[i];break;
+
+                case 'C': science_commerce = "Commerce ";science_commerce_marks=CommerceMarks[i];break;
+
                 }
+
                 System.out.println("------------------------------");
-                System.out.println("RollNo"+"\t"+roll_no[i] +"\n"+ "Name"+"\t"+names[i]+"\n"+ "English"+"\t"+EnglishMarks[i]+"\n"+ "Hindi"+"\t"+HindiMarks[i]+"\n"+ "History"+"\t"+HistoryMarks[i]+"\n"+ "Geography"+"\t"+GeographyMarks[i]+"\n"+ "Maths"+"\t"+MathsMarks[i]+"\n"+ science_commerce+"\t"+science_commerce_marks+"\n"+ optional_subject + "\t"+optional_marks);
+
+                System.out.println("RollNo   "+"\t"+roll_no[i] +"\n"+ "Name     "+"\t"+names[i]+"\n"+ "English  "+"\t"+EnglishMarks[i]+"\n"+ "Hindi    "+"\t"+HindiMarks[i]+"\n"+ "History  "+"\t"+HistoryMarks[i]+"\n"+ "Geography"+"\t"+GeographyMarks[i]+"\n"+ "Maths    "+"\t"+MathsMarks[i]+"\n"+ science_commerce+"\t"+science_commerce_marks+"\n"+ optional_subject + "\t"+optional_marks);
+
                 System.out.println("*****************************************************************");
+
                 System.out.println("1:See the list of Students roll no. wise");
+
                 System.out.println("2:See Marks of all Subjects");
+
                 System.out.println("3:See Percentage of all Students");
+
                 System.out.println("4:Display highest marks in each subject");
+
                 System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                 System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                 System.out.println("7:Modify Details " );
+                System.out.println("8.Exit");
+
                 System.out.println("****************************************************************");
+
                 break;
+
                 case 7: System.out.println("Enter 1 for Modifying name and 2 for modifying Marks");
+
                 int option8 = scan.nextInt();
+
                 Scanner scan3 = new Scanner(System.in);
+
                 if (option8==1)
+
                 {
+
                     System.out.println("Please enter Roll No1 of student");
+
                     
+
                     String new_name="";
+
                     String blanks = "";
+
                     int k2 = scan.nextInt();
+
                     System.out.println("Please enter New Name");
+
                     
+
                     new_name = scan3.nextLine();
+
                     int length = new_name.length();
+
                     int diff = 20-length;
+
                     for (int i5=0;i5<diff;i5++)
+
                     {
+
                         blanks = " "+blanks;
+
                     }
+
                     names[k2-1] = new_name+blanks;
+                    
+                    //Display Updated Details : Starts
+                    science_commerce = "";
+
+                    science_commerce_marks=0.0;
+
+                                       
+
+                    switch (grp3[k2-1])
+
+                    {
+
+                        case 'Y': optional_subject = "Yoga ";optional_marks = YogaMarks[k2-1] ;
+
+                        break;
+
+                        case 'C': optional_subject="Computer";optional_marks = ComputerMarks[k2-1];
+
+                        break;
+
+                        case 'K': optional_subject="Cookery ";optional_marks=CookeryMarks[k2-1];;
+
+                        break;
+
+                        case 'A': optional_subject="Arts ";optional_marks=ArtsMarks[k2-1];
+
+                        break;
+
+                    }
+
+                    switch (grp2[k2-1])
+
+                    {
+
+                    case 'S': science_commerce = "Science  ";science_commerce_marks=ScienceMarks[k2-1];break;
+
+                    case 'C': science_commerce = "Commerce ";science_commerce_marks=CommerceMarks[k2-1];break;
+
+                    }
+
+                    System.out.println("------------------------------");
+
+                    System.out.println("RollNo   "+"\t"+roll_no[k2-1] +"\n"+ "Name     "+"\t"+names[k2-1]+"\n"+ "English  "+"\t"+EnglishMarks[k2-1]+"\n"+ "Hindi    "+"\t"+HindiMarks[k2-1]+"\n"+ "History   "+"\t"+HistoryMarks[k2-1]+"\n"+ "Geography"+"\t"+GeographyMarks[k2-1]+"\n"+ "Maths    "+"\t"+MathsMarks[k2-1]+"\n"+ science_commerce+"\t"+science_commerce_marks+"\n"+ optional_subject + "\t"+optional_marks);
+
+                    System.out.println("*****************************************************************");
+                    
+                    //Display Updated details : Ends
+                    
+
                     System.out.println("1:See the list of Students roll no. wise");
+
                     System.out.println("2:See Marks of all Subjects");
+
                     System.out.println("3:See Percentage of all Students");
+
                     System.out.println("4:Display highest marks in each subject");
+
                     System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                     System.out.println("6:See marks of a particular student: Enter Roll no.");
-                    System.out.println("7:Modify Details " );System.out.println("****************************************************************");
+
+                    System.out.println("7:Modify Details " );
+                    System.out.println("8.Exit");
+                    System.out.println("****************************************************************");
+
                 }
+
                 if (option8==2)
+
                 {
+
                     System.out.println("Please enter Roll No of student");
+
                     int k1 = scan.nextInt();
+
                     int i1 = k1-1;
+
                     double total_marks1 = 0.0; double total_percentage = 0.0;
+
                     science_commerce = "";science_commerce_marks=0.0;
+
                     double percentage = Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1])/7);
+
                     //System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Ovear All %"+"\t"+ percentage +"\n"+ "1. English"+"\t"+EnglishMarks[i1]+"\n"+ "2. Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3. History"+"\t"+HistoryMarks[i1]+"\n"+ "4. Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5. Maths"+"\t"+MathsMarks[i1]+"\n"+ "6. Science"+"\t"+ScienceMarks[i1]+"\n"+ "7. Commc"+"\t"+CommerceMarks[i1]+"\n"+ "8. Yoga"+"\t"+YogaMarks[i1]+"\n"+ "9. Comptr"+"\t"+ComputerMarks[i1] +"\n"+ "10. Cookery"+"\t"+CookeryMarks[i1]+"\n"+ "11. Arts"+"\t"+ArtsMarks[i1]+"\n");
+
                     switch (grp3[i1])
+
                     {
+
                         case 'Y': optional_subject = "Yoga ";optional_marks = YogaMarks[i1] ;
+
                         break;
+
                         case 'C': optional_subject="Computer";optional_marks = ComputerMarks[i1];
+
                         break;
+
                         case 'K': optional_subject="Cookery ";optional_marks=CookeryMarks[i1];;
+
                         break;
+
                         case 'A': optional_subject="Arts ";optional_marks=ArtsMarks[i1];
+
                         break;
+
                     }
+
                     switch (grp2[i1])
+
                     {
+
                     case 'S': science_commerce = "Science";science_commerce_marks=ScienceMarks[i1];break;
+
                     case 'C': science_commerce = "Commerce";science_commerce_marks=CommerceMarks[i1];break;
+
                     }
+
                     System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+percentage +"\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                     System.out.println("Please select Subject to modify marks");
+
                     int k2 = scan.nextInt();
+
                     System.out.println("Please Enter new marks");
+
                     Scanner scan4 = new Scanner(System.in);
+
                     int new_marks = scan.nextInt();
+
                     switch (k2)
+
                     {
+
                         case 1: EnglishMarks[i1]= new_marks;
+
                         System.out.println("Marks Updated Succesfully");
+
                         total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                         total_percentage = Math.round(total_marks1/7) ;
+
                         System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                         System.out.println("----------------------------------------------------------------");
+
                         System.out.println("1:See the list of Students roll no. wise");
+
                         System.out.println("2:See Marks of all Subjects");
+
                         System.out.println("3:See Percentage of all Students");
+
                         System.out.println("4:Display highest marks in each subject");
+
                         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                         System.out.println("7:Modify Details " );
+                        System.out.println("8.Exit");
+
                         System.out.println("****************************************************************");
+
                         break;
+
                         case 2: HindiMarks[i1]= new_marks;
+
                         System.out.println("Marks Updated Succesfully");
+
                         total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                         total_percentage = Math.round(total_marks1/7) ;
+
                         System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                         System.out.println("----------------------------------------------------------------");
+
                         System.out.println("1:See the list of Students roll no. wise");
+
                         System.out.println("2:See Marks of all Subjects");
+
                         System.out.println("3:See Percentage of all Students");
+
                         System.out.println("4:Display highest marks in each subject");
+
                         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                         System.out.println("7:Modify Details " );
+                        System.out.println("8.Exit");
+
                         System.out.println("****************************************************************");
+
                         break;
+
                         case 3: HistoryMarks[i1]= new_marks;
+
                         System.out.println("Marks Updated Succesfully");
+
                         total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                         total_percentage = Math.round(total_marks1/7) ;
+
                         System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                         System.out.println("----------------------------------------------------------------");
+
                         System.out.println("1:See the list of Students roll no. wise");
+
                         System.out.println("2:See Marks of all Subjects");
+
                         System.out.println("3:See Percentage of all Students");
+
                         System.out.println("4:Display highest marks in each subject");
+
                         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                         System.out.println("7:Modify Details " );
+                        System.out.println("8.Exit");
+
                         System.out.println("****************************************************************");
+
                         break;
+
                         case 4: GeographyMarks[i1]= new_marks;
+
                         System.out.println("Marks Updated Succesfully");
+
                         total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                         total_percentage = Math.round(total_marks1/7) ;
+
                         System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                         System.out.println("----------------------------------------------------------------");
+
                         System.out.println("1:See the list of Students roll no. wise");
+
                         System.out.println("2:See Marks of all Subjects");
+
                         System.out.println("3:See Percentage of all Students");
+
                         System.out.println("4:Display highest marks in each subject");
+
                         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                         System.out.println("7:Modify Details " );
+                        System.out.println("8.Exit");
+
                         System.out.println("****************************************************************");
+
                         break;
+
                         case 5: MathsMarks[i1]= new_marks;
+
                         System.out.println("Marks Updated Succesfully");
+
                         total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                         total_percentage = Math.round(total_marks1/7) ;
+
                         System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                         System.out.println("----------------------------------------------------------------");
+
                         System.out.println("1:See the list of Students roll no. wise");
+
                         System.out.println("2:See Marks of all Subjects");
+
                         System.out.println("3:See Percentage of all Students");
+
                         System.out.println("4:Display highest marks in each subject");
+
                         System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                         System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                         System.out.println("7:Modify Details " );
+                        System.out.println("8.Exit");
+
                         System.out.println("****************************************************************");
+
                         break;
+
                         case 6:
+
                          if (grp2[i1] == 'S')ScienceMarks[i1]= new_marks;
+
                          if (grp2[i1] == 'C')CommerceMarks[i1]= new_marks;
+
                          science_commerce_marks = new_marks;
+
                          System.out.println("Marks Updated Succesfully");
+
                          total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                              total_percentage = Math.round(total_marks1/7) ;
+
                              System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                              System.out.println("----------------------------------------------------------------");
+
                              System.out.println("1:See the list of Students roll no. wise");
+
                              System.out.println("2:See Marks of all Subjects");
+
                              System.out.println("3:See Percentage of all Students");
+
                              System.out.println("4:Display highest marks in each subject");
+
                              System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                              System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                              System.out.println("7:Modify Details " );
+                             System.out.println("8.Exit");
+
                              System.out.println("****************************************************************");
+
                         break;
+
                         case 7:
+
                          switch (grp3[i1])
+
                             {
+
                                 case 'Y': YogaMarks[i1] = new_marks ;
+
                                 break;
+
                                 case 'C': ComputerMarks[i1] = new_marks;
+
                                 break;
+
                                 case 'K': CookeryMarks[i1]=new_marks;
+
                                 break;
+
                                 case 'A': ArtsMarks[i1]=new_marks;
+
                                 break;
+
                             }
+
                          optional_marks = new_marks;
+
                          System.out.println("Marks Updated Succesfully");
+
                          total_marks1= Math.round((MathsMarks[i1]+HistoryMarks[i1]+GeographyMarks[i1]+EnglishMarks[i1]+HindiMarks[i1] +ScienceMarks[i1]+CommerceMarks[i1] +YogaMarks[i1]+ArtsMarks[i1]+ComputerMarks[i1]));
+
                             total_percentage = Math.round(total_marks1/7) ;
+
                             System.out.println("RollNo"+"\t"+roll_no[i1] +"\n"+ "Name"+"\t"+names[i1]+"\n"+ "Overall % "+ total_percentage+ "\n"+"1 English"+"\t"+EnglishMarks[i1]+"\n"+ "2 Hindi"+"\t"+HindiMarks[i1]+"\n"+ "3 History"+"\t"+HistoryMarks[i1]+"\n"+ "4 Geography"+"\t"+GeographyMarks[i1]+"\n"+ "5 Maths"+"\t"+MathsMarks[i1]+"\n"+ "6 "+ science_commerce+"\t"+science_commerce_marks+"\n"+ "7 "+ optional_subject + "\t"+optional_marks);
+
                             System.out.println("----------------------------------------------------------------");
+
                             System.out.println("1:See the list of Students roll no. wise");
+
                             System.out.println("2:See Marks of all Subjects");
+
                             System.out.println("3:See Percentage of all Students");
+
                             System.out.println("4:Display highest marks in each subject");
+
                             System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                             System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                             System.out.println("7:Modify Details " );
+                            System.out.println("8.Exit");
+
                             System.out.println("****************************************************************");
+
                         break;
+
                        default: System.out.println("Invalid Option; Please enter valid Option");
+
                        System.out.println("1:See the list of Students roll no. wise");
+
                        System.out.println("2:See Marks of all Subjects");
+
                        System.out.println("3:See Percentage of all Students");
+
                        System.out.println("4:Display highest marks in each subject");
+
                        System.out.println("5:Display Overall percentagewise Top 3 rankers");
+
                        System.out.println("6:See marks of a particular student: Enter Roll no.");
+
                        System.out.println("7:Modify Details " );
+                       System.out.println("8.Exit");
+
                        System.out.println("****************************************************************");
+
                        break;
+
                     }
+
                 }
-           // default :System.out.println("Invalid Option; Please enter valid option");
-            //break;
-            	
+                case 8: 
+                	System.out.println("Do come again ! Good Bye!");
+                	System.out.println("****************************************************************");
+                	break;
+
+            
+
+            
+
             }
+
         }
-        while (option !=9);
+
+        while (option !=8);
+
     }
-    }
+
+    } 
+
+
